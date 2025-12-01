@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.1">
   <diagram name="Page-1" id="oYlMDyV3FdvknKEnqVfY">
-    <mxGraphModel dx="1067" dy="726" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="626" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,12 +16,12 @@
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="align (bytes + metadata size) to &lt;b&gt;16 bytes&lt;/b&gt; in 64-bit mode" vertex="1">
           <mxGeometry height="70" width="170" x="310" y="310" as="geometry" />
         </mxCell>
-        <mxCell id="9NN8qjYtB0Dsv46AUDU1-7" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+        <mxCell id="9NN8qjYtB0Dsv46AUDU1-7" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=light-dark(#000000,#FF0000);fillColor=#e51400;strokeColor=light-dark(#B20000,#FF3422);curved=0;" target="9NN8qjYtB0Dsv46AUDU1-11">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="230" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9NN8qjYtB0Dsv46AUDU1-8" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+        <mxCell id="9NN8qjYtB0Dsv46AUDU1-8" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=light-dark(#82B366,#9BFB64);" target="9NN8qjYtB0Dsv46AUDU1-10">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="560" y="610" as="targetPoint" />
           </mxGeometry>
@@ -29,8 +29,17 @@
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="bytes &amp;lt; 1032" vertex="1">
           <mxGeometry height="80" width="160" x="315" y="430" as="geometry" />
         </mxCell>
-        <mxCell id="9NN8qjYtB0Dsv46AUDU1-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div align=&quot;left&quot;&gt;static struct malloc_par mp_ = {&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.top_pad = 0,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.n_mmaps_max = 65536,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.mmap_threshold = 128 * 1024,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.trim_threshold = 128 * 1024,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.arena_test = 8,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.tcache_count = 7,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.tcache_small_bins = 64,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.tcache_max_bytes = 1032,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.tcache_unsorted_limit = 0,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;}&lt;/div&gt;" vertex="1">
+        <mxCell id="9NN8qjYtB0Dsv46AUDU1-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div align=&quot;left&quot;&gt;static struct malloc_par mp_ = {&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.top_pad = 0,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.n_mmaps_max = 65536,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.mmap_threshold = 128 * 1024,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.trim_threshold = 128 * 1024,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.arena_test = 8,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.tcache_count = 7,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.tcache_small_bins = 64,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.tcache_max_bytes = 1032,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.tcache_unsorted_limit = 0,&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;}&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;MALLOC_ALIGNMENT = 16&lt;/div&gt;" vertex="1">
           <mxGeometry height="205" width="250" x="30" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="9NN8qjYtB0Dsv46AUDU1-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div align=&quot;left&quot;&gt;&lt;pre&gt;&lt;span id=&quot;codeline-3379&quot; style=&quot;color: light-dark(rgb(0, 0, 0), rgb(251, 251, 251));&quot;&gt;&lt;span class=&quot;k&quot;&gt;static void&lt;/span&gt;&lt;br&gt;tcache_init(void)&lt;/span&gt;&lt;/pre&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="860" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="9NN8qjYtB0Dsv46AUDU1-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="get large tcache linked list from index&amp;nbsp;64 + count_leading_zeros(1032) - count_leading_zeros(bytes)" vertex="1">
+          <mxGeometry height="70" width="180" x="500" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="9NN8qjYtB0Dsv46AUDU1-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="get tcache linked list from the size aligned by 16 bytes" vertex="1">
+          <mxGeometry height="70" width="170" x="110" y="610" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
