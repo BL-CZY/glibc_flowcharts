@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.3">
   <diagram name="Page-1" id="oYlMDyV3FdvknKEnqVfY">
-    <mxGraphModel dx="6109" dy="4806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="20621" dy="14678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-39" parent="0" value="bg" />
@@ -45,63 +45,8 @@
         <mxCell id="-WvkMkaJOf7xV02tOFcN-15" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;fontSize=200;fontColor=light-dark(#000000,#858585);align=right;spacingRight=50;spacingLeft=50;" value="Small Bins" vertex="1">
           <mxGeometry height="1220" width="2650" x="-60" y="3330" as="geometry" />
         </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-22" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="-WvkMkaJOf7xV02tOFcN-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-20">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-17" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rhombus;whiteSpace=wrap;html=1;" value="is nb smaller than MIN_LARGE_SIZE" vertex="1">
-          <mxGeometry height="80" width="200" x="200" y="3540" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-23" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="-WvkMkaJOf7xV02tOFcN-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="-WvkMkaJOf7xV02tOFcN-21">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-20" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="get the bin" vertex="1">
-          <mxGeometry height="50" width="80" x="460" y="3690" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-31" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="-WvkMkaJOf7xV02tOFcN-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-25">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="740" y="3855" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-37" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="-WvkMkaJOf7xV02tOFcN-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-WvkMkaJOf7xV02tOFcN-36">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-220" y="4480" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-21" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rhombus;whiteSpace=wrap;html=1;" value="is the bin&#39;s bk pointer itself?" vertex="1">
-          <mxGeometry height="90" width="220" x="390" y="3810" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-32" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="-WvkMkaJOf7xV02tOFcN-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-WvkMkaJOf7xV02tOFcN-28">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-25" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="get the bk of bin (victim)" vertex="1">
-          <mxGeometry height="50" width="80" x="700" y="3920" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-26" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;as long as the corresponding tchache bin (if exists) is not empty, populate it with fastbin chunks.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;there is no check here&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="420" x="850" y="4240" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-27" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="interestingly smallbins don&#39;t have safelinking" vertex="1">
-          <mxGeometry height="60" width="180" x="630" y="3685" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-35" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="-WvkMkaJOf7xV02tOFcN-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-26">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1060" y="4092" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-38" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="-WvkMkaJOf7xV02tOFcN-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="-WvkMkaJOf7xV02tOFcN-29">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-28" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rhombus;whiteSpace=wrap;html=1;" value="is victim&#39;s bk&#39;s fd victim?" vertex="1">
-          <mxGeometry height="90" width="220" x="630" y="4047" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-29" parent="9NN8qjYtB0Dsv46AUDU1-39" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;pre&gt;&lt;span id=&quot;codeline-4104&quot;&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_printerr&quot;&gt;malloc_printerr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;malloc(): smallbin double linked list corrupted&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
-          <mxGeometry height="70" width="540" x="470" y="4350" as="geometry" />
-        </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-36" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="keep going" vertex="1">
-          <mxGeometry height="70" width="140" x="-250" y="6040" as="geometry" />
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-39" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;fontSize=200;fontColor=light-dark(#000000,#858585);align=right;spacingRight=50;" value="&lt;div&gt;Malloc&lt;/div&gt;&lt;div&gt;&amp;nbsp;consolidate&lt;/div&gt;" vertex="1">
+          <mxGeometry height="1830" width="3120" x="3740" y="-1280" as="geometry" />
         </mxCell>
         <mxCell id="1" parent="0" />
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-3" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="9NN8qjYtB0Dsv46AUDU1-2">
@@ -514,6 +459,70 @@
         </mxCell>
         <mxCell id="-WvkMkaJOf7xV02tOFcN-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;Each bin is a doubly-linked list with a FIFO principle, so it&#39;s circular&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="320" x="3510" y="3520" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-22" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-17" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="is nb smaller than MIN_LARGE_SIZE" vertex="1">
+          <mxGeometry height="80" width="200" x="200" y="3540" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-23" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="-WvkMkaJOf7xV02tOFcN-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="get the bin" vertex="1">
+          <mxGeometry height="50" width="80" x="460" y="3690" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-31" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="3855" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-21" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="is the bin&#39;s bk pointer itself?" vertex="1">
+          <mxGeometry height="90" width="220" x="390" y="3810" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-32" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-WvkMkaJOf7xV02tOFcN-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="get the bk of bin (victim)" vertex="1">
+          <mxGeometry height="50" width="80" x="700" y="3920" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;as long as the corresponding tchache bin (if exists) is not empty, populate it with fastbin chunks.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;there is no check here&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="420" x="850" y="4240" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="interestingly smallbins don&#39;t have safelinking" vertex="1">
+          <mxGeometry height="60" width="180" x="630" y="3685" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-35" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="4092" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-38" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="-WvkMkaJOf7xV02tOFcN-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-28" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="is victim&#39;s bk&#39;s fd victim?" vertex="1">
+          <mxGeometry height="90" width="220" x="630" y="4047" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-29" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;pre&gt;&lt;span id=&quot;codeline-4104&quot;&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_printerr&quot;&gt;malloc_printerr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;malloc(): smallbin double linked list corrupted&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="70" width="540" x="470" y="4350" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-37" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-WvkMkaJOf7xV02tOFcN-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-220" y="4480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="keep going" vertex="1">
+          <mxGeometry height="70" width="140" x="-250" y="6040" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;malloc_consolidate() does some checks with do_check_inuse_chunk() and do_check_chunk():&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;# Complete List of Checks in do_check_inuse_chunk() and do_check_chunk()&lt;/div&gt;&lt;br&gt;## do_check_inuse_chunk() Checks&lt;br&gt;&lt;br&gt;1. Basic Chunk Validation&lt;br&gt;&amp;nbsp; &amp;nbsp;- Calls do_check_chunk(av, p) - performs all checks below&lt;br&gt;&lt;br&gt;2. Inuse Status Check&lt;br&gt;&amp;nbsp; &amp;nbsp;assert(inuse(p));&lt;br&gt;&amp;nbsp; &amp;nbsp;- Verifies the chunk claims to be in use (PREV_INUSE bit of next chunk is set)&lt;br&gt;&lt;br&gt;3. Previous Chunk Validation (if previous is free)&lt;br&gt;&amp;nbsp; &amp;nbsp;if (!prev_inuse(p))&lt;br&gt;&amp;nbsp; &amp;nbsp;- assert(next_chunk(prv) == p)&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Previous chunk&#39;s size must point back to this chunk&lt;br&gt;&amp;nbsp; &amp;nbsp;- Calls do_check_free_chunk(av, prv)&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Validates the previous free chunk&lt;br&gt;&lt;br&gt;4. Next Chunk Validation&lt;br&gt;&amp;nbsp; &amp;nbsp;If next chunk is top chunk:&lt;br&gt;&amp;nbsp; &amp;nbsp;- assert(prev_inuse(next));&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Top chunk must have PREV_INUSE bit set&lt;br&gt;&amp;nbsp; &amp;nbsp;- assert(chunksize(next) &amp;gt;= MINSIZE);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Top chunk must be at least minimum size&lt;br&gt;&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp;If next chunk is free:&lt;br&gt;&amp;nbsp; &amp;nbsp;- Calls do_check_free_chunk(av, next)&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Validates the next free chunk&lt;br&gt;&lt;br&gt;---&lt;br&gt;&lt;br&gt;## do_check_chunk() Checks&lt;br&gt;&lt;br&gt;### For Non-mmapped Chunks&lt;br&gt;&lt;br&gt;If chunk is NOT top (and heap is contiguous):&lt;br&gt;- assert(((char *)p) &amp;gt;= min_address);&lt;br&gt;&amp;nbsp; Chunk address must be &amp;gt;= minimum heap address&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;br&gt;- assert(((char *)p + sz) &amp;lt;= ((char *)(av-&amp;gt;top)));&lt;br&gt;&amp;nbsp; Chunk end must be &amp;lt;= top chunk address&lt;br&gt;&lt;br&gt;If chunk IS top:&lt;br&gt;- assert((unsigned long)(sz) &amp;gt;= MINSIZE);&lt;br&gt;&amp;nbsp; Top size must be at least MINSIZE&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;br&gt;- assert(prev_inuse(p));&lt;br&gt;&amp;nbsp; Top chunk&#39;s PREV_INUSE bit must be set&lt;br&gt;&lt;br&gt;### For mmapped Chunks&lt;br&gt;&lt;br&gt;When heap is contiguous AND not using initial top:&lt;br&gt;- assert(((char *)p) &amp;lt; min_address || ((char *)p) &amp;gt;= max_address);&lt;br&gt;&amp;nbsp; mmapped chunk must be outside the main heap range&lt;br&gt;&lt;br&gt;Page Alignment:&lt;br&gt;- assert(((prev_size(p) + sz) &amp;amp; (GLRO(dl_pagesize) - 1)) == 0);&lt;br&gt;&amp;nbsp; Total size (prev_size + chunk size) must be page-aligned&lt;br&gt;&lt;br&gt;Memory Alignment:&lt;br&gt;- assert(!misaligned_chunk(p));&lt;br&gt;&amp;nbsp; Chunk must be properly aligned (typically 8 or 16 byte alignment)&lt;br&gt;&lt;br&gt;---&lt;br&gt;&lt;br&gt;## Summary by Category&lt;br&gt;&lt;br&gt;Memory Bounds (5 checks):&lt;br&gt;- Non-mmapped: address &amp;gt;= min_address&lt;br&gt;- Non-mmapped: end &amp;lt;= top chunk&lt;br&gt;- mmapped: outside main heap range&lt;br&gt;- Top chunk: size &amp;gt;= MINSIZE&lt;br&gt;- Page alignment for mmapped&lt;br&gt;&lt;br&gt;Alignment (1 check):&lt;br&gt;- Chunk memory alignment&lt;br&gt;&lt;br&gt;Status Bits (2 checks):&lt;br&gt;- Chunk claims to be inuse&lt;br&gt;- Top/previous inuse bits correct&lt;br&gt;&lt;br&gt;Linkage (1 check):&lt;br&gt;- Previous chunk&#39;s size points correctly back&lt;br&gt;&lt;br&gt;Recursive Validations (2 checks):&lt;br&gt;- Validates previous free chunk if present&lt;br&gt;- Validates next free chunk if present&lt;br&gt;&lt;br&gt;Total: 11 direct assertions + recursive free chunk validations" vertex="1">
+          <mxGeometry height="1400" width="460" x="3850" y="-1140" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="" vertex="1">
+          <mxGeometry height="400" width="590" x="4380" y="-1130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
