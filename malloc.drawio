@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.2">
   <diagram name="Page-1" id="oYlMDyV3FdvknKEnqVfY">
-    <mxGraphModel dx="3237" dy="2852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3810" dy="3287" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-39" parent="0" value="bg" />
@@ -9,14 +9,6 @@
         </mxCell>
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-46" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="9NN8qjYtB0Dsv46AUDU1-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="9NN8qjYtB0Dsv46AUDU1-36">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9NN8qjYtB0Dsv46AUDU1-44" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="9NN8qjYtB0Dsv46AUDU1-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="9NN8qjYtB0Dsv46AUDU1-43">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="390" y="1590" />
-              <mxPoint x="707" y="1590" />
-            </Array>
-          </mxGeometry>
         </mxCell>
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-45" edge="1" parent="9NN8qjYtB0Dsv46AUDU1-39" source="9NN8qjYtB0Dsv46AUDU1-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="9NN8qjYtB0Dsv46AUDU1-43">
           <mxGeometry relative="1" as="geometry">
@@ -43,6 +35,9 @@
         </mxCell>
         <mxCell id="FIdvG4DXuz2LYwi1fpN5-10" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;fontSize=200;fontColor=light-dark(#000000,#858585);align=right;spacingRight=50;" value="Macros" vertex="1">
           <mxGeometry height="1590" width="2170" x="460" y="-1670" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-64" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;fontSize=200;fontColor=light-dark(#000000,#858585);align=left;spacingRight=50;spacingLeft=50;" value="Fastbin" vertex="1">
+          <mxGeometry height="2870" width="1850" x="-2130" y="2560" as="geometry" />
         </mxCell>
         <mxCell id="1" parent="0" />
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-3" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="9NN8qjYtB0Dsv46AUDU1-2">
@@ -111,13 +106,11 @@
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="TODO: add elixir links" vertex="1">
           <mxGeometry height="60" width="170" x="510" y="110" as="geometry" />
         </mxCell>
-        <mxCell id="9NN8qjYtB0Dsv46AUDU1-24" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=light-dark(#000000,#FF0000);strokeColor=light-dark(#000000,#FF0000);exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="9NN8qjYtB0Dsv46AUDU1-23">
+        <mxCell id="9NN8qjYtB0Dsv46AUDU1-24" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=light-dark(#000000,#FF0000);strokeColor=light-dark(#000000,#FF0000);exitX=0;exitY=0.5;exitDx=0;exitDy=0;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="552.8100000000004" y="1099.529411764706" as="sourcePoint" />
+            <mxPoint x="390" y="1730" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="9NN8qjYtB0Dsv46AUDU1-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="return Null" vertex="1">
-          <mxGeometry height="40" width="80" x="350" y="1270" as="geometry" />
         </mxCell>
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-29" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#008a00;strokeColor=light-dark(#005700,#00FF00);" target="9NN8qjYtB0Dsv46AUDU1-26">
           <mxGeometry relative="1" as="geometry" />
@@ -146,7 +139,7 @@
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;increment the &lt;b&gt;num_slots&lt;/b&gt;&amp;nbsp;field for this linked-list and set this pointer to the &lt;b&gt;next&lt;/b&gt; field, applying safe_linking if it is not the first entry&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;returns this entry&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;values changed:&lt;/div&gt;&lt;div&gt;+0x8 key is set to NULL&lt;/div&gt;" vertex="1">
           <mxGeometry height="190" width="170" x="940" y="1490" as="geometry" />
         </mxCell>
-        <mxCell id="FIdvG4DXuz2LYwi1fpN5-20" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-19">
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-22" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-21">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;void *&lt;/div&gt;&lt;div&gt;__libc_malloc2(size_t bytes)&lt;/div&gt;" vertex="1">
@@ -241,9 +234,6 @@
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="return Null" vertex="1">
           <mxGeometry height="40" width="80" x="-610" y="960" as="geometry" />
         </mxCell>
-        <mxCell id="xdCSCpmpAQZZakMFT2jp-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="try to get a lock to the main arena" vertex="1">
-          <mxGeometry height="70" width="180" x="30" y="2680" as="geometry" />
-        </mxCell>
         <mxCell id="xdCSCpmpAQZZakMFT2jp-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;pre&gt;&lt;span id=&quot;codeline-1820&quot; class=&quot;line-highlight&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_state&quot;&gt;malloc_state&lt;/a&gt;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1821&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1822&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Serialize access.  */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1823&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/__libc_lock_define&quot;&gt;__libc_lock_define&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/mutex&quot;&gt;mutex&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1824&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1825&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Flags (formerly in max_fast).  */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1826&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1827&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1828&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Set if the fastbin chunks contain recently inserted free blocks.  */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1829&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Note this is a bool but not all targets support atomics on booleans.  */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1830&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/have_fastchunks&quot;&gt;have_fastchunks&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1831&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1832&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Fastbins */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1833&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/mfastbinptr&quot;&gt;mfastbinptr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/fastbinsY&quot;&gt;fastbinsY&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/NFASTBINS&quot;&gt;NFASTBINS&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1834&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1835&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Base of the topmost chunk -- not otherwise kept in a bin */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1836&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/mchunkptr&quot;&gt;mchunkptr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/top&quot;&gt;top&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1837&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1838&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* The remainder from the most recent split of a small request */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1839&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/mchunkptr&quot;&gt;mchunkptr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/last_remainder&quot;&gt;last_remainder&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1840&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1841&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Normal bins packed as described above */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1842&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/mchunkptr&quot;&gt;mchunkptr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/bins&quot;&gt;bins&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/NBINS&quot;&gt;NBINS&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1843&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1844&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Bitmap of bins */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1845&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/binmap&quot;&gt;binmap&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/BINMAPSIZE&quot;&gt;BINMAPSIZE&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1846&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1847&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Linked list */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1848&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_state&quot;&gt;malloc_state&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1849&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1850&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Linked list for free arenas.  Access to this field is serialized&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1851&quot;&gt;&lt;span class=&quot;cm&quot;&gt;     by free_list_lock in arena.c.  */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1852&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_state&quot;&gt;malloc_state&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/next_free&quot;&gt;next_free&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1853&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1854&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Number of threads attached to this arena.  0 if the arena is on&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1855&quot;&gt;&lt;span class=&quot;cm&quot;&gt;     the free list.  Access to this field is serialized by&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1856&quot;&gt;&lt;span class=&quot;cm&quot;&gt;     free_list_lock in arena.c.  */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1857&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/INTERNAL_SIZE_T&quot;&gt;INTERNAL_SIZE_T&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/attached_threads&quot;&gt;attached_threads&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1858&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1859&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* Memory allocated from the system in this arena.  */&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1860&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/INTERNAL_SIZE_T&quot;&gt;INTERNAL_SIZE_T&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/system_mem&quot;&gt;system_mem&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1861&quot;&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/INTERNAL_SIZE_T&quot;&gt;INTERNAL_SIZE_T&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/max_system_mem&quot;&gt;max_system_mem&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1862&quot;&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
           <mxGeometry height="760" width="580" x="-1750" y="-1640" as="geometry" />
         </mxCell>
@@ -280,8 +270,142 @@
         <mxCell id="FIdvG4DXuz2LYwi1fpN5-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingBottom=0;spacingRight=10;" value="&lt;div align=&quot;left&quot;&gt;As you can see here it is only adding one SIZE_SZ because the prev_size field is often included in the previous chunk&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;if req is SIZE_SZ went across the size boundary (i.e. req % 0x10 is larger than 0x8), the prev_size field wil be included, otherwise no&lt;/div&gt;" vertex="1">
           <mxGeometry height="150" width="260" x="1020" y="-850" as="geometry" />
         </mxCell>
-        <mxCell id="FIdvG4DXuz2LYwi1fpN5-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;void *&lt;/div&gt;&lt;div&gt;__libc_malloc2(size_t bytes)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="70" width="180" x="30" y="2370" as="geometry" />
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-31" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;void *&lt;/div&gt;&lt;div&gt;_int_malloc(m_state av, size_t bytes)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="30" y="2450" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-23" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="FIdvG4DXuz2LYwi1fpN5-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="lock the malloc state and get it" vertex="1">
+          <mxGeometry height="70" width="180" x="30" y="2330" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-32" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="use request2size to get the nb number of bytes required" vertex="1">
+          <mxGeometry height="70" width="180" x="30" y="2560" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="use mmap syscall to get a buf" vertex="1">
+          <mxGeometry height="40" width="120" x="350" y="2800" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-29" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#00FF00;strokeColor=light-dark(#00FF00,#00FF00);" target="FIdvG4DXuz2LYwi1fpN5-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-30" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="FIdvG4DXuz2LYwi1fpN5-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-155" y="2700" />
+            </Array>
+            <mxPoint x="-40" y="2790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-27" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="is av NULL" vertex="1">
+          <mxGeometry height="60" width="140" x="50" y="2670" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-39" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=light-dark(#000000,#00FF00);strokeColor=light-dark(#000000,#00FF00);" target="FIdvG4DXuz2LYwi1fpN5-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-40" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="FIdvG4DXuz2LYwi1fpN5-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-33" parent="1" style="rhombus;whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" value="is nb larger than max_fast (128)?" vertex="1">
+          <mxGeometry height="80" width="150" x="-230" y="2860" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;pre&gt;&lt;span id=&quot;codeline-840&quot;&gt;&lt;/span&gt;&lt;span id=&quot;codeline-841&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef &lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/DEFAULT_MXFAST&quot;&gt;DEFAULT_MXFAST&lt;/a&gt;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-842&quot; class=&quot;line-highlight&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#define &lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/DEFAULT_MXFAST&quot;&gt;DEFAULT_MXFAST&lt;/a&gt;     (64 * &lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/SIZE_SZ&quot;&gt;SIZE_SZ&lt;/a&gt; / 4) // evaluates to 128&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="60" width="520" x="1540" y="-1470" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div align=&quot;left&quot;&gt;Fast bin:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Basically contains a list&amp;nbsp;of chunks of size n until 128 by default&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;It is indexed like so:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;0 : 32 (0x20) bytes&amp;nbsp;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;1 : 48 (0x30) bytes&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;2 : 64 (0x40) bytes&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;...&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Therefore, to index into the fastbin, it is simply done by this macro:&lt;/div&gt;&lt;pre&gt;&lt;span id=&quot;codeline-1737&quot; class=&quot;line-highlight&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#define &lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/fastbin_index&quot;&gt;fastbin_index&lt;/a&gt;(&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/sz&quot;&gt;sz&lt;/a&gt;) \&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1738&quot;&gt;&lt;span class=&quot;cp&quot;&gt;  ((((unsigned int) (&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/sz&quot;&gt;sz&lt;/a&gt;)) &amp;gt;&amp;gt; (&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/SIZE_SZ&quot;&gt;SIZE_SZ&lt;/a&gt; == 8 ? 4 : 3)) - 2)&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-1739&quot;&gt;&lt;/span&gt;&lt;/pre&gt;with the premise that sz is within the 0-128" vertex="1">
+          <mxGeometry height="242.5" width="450" x="-970" y="2690" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-42" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;get fast bin index with&amp;nbsp;&lt;b&gt;fastbin_index&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;get the chunk (victim) from fastbin&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="140" x="-500" y="3070" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="keep going" vertex="1">
+          <mxGeometry height="70" width="180" x="30" y="3730" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-45" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="FIdvG4DXuz2LYwi1fpN5-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-54" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-46">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-630" y="3270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-41" parent="1" style="rhombus;whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" value="is victim NULL?" vertex="1">
+          <mxGeometry height="80" width="150" x="-505" y="3230" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-44" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-735" y="3115" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;pre&gt;&lt;span id=&quot;codeline-1734&quot; class=&quot;line-highlight&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#define &lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/fastbin&quot;&gt;fastbin&lt;/a&gt;(&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/ar_ptr&quot;&gt;ar_ptr&lt;/a&gt;, idx) ((&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/ar_ptr&quot;&gt;ar_ptr&lt;/a&gt;)-&amp;gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/fastbinsY&quot;&gt;fastbinsY&lt;/a&gt;[idx])&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="50" width="430" x="-940" y="3020" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-56" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;fillColor=#1ba1e2;fontColor=light-dark(#FFFFFF, #fcffff);strokeColor=#006EAF;" value="&lt;div&gt;malloc align check victim&lt;/div&gt;&lt;br&gt;&lt;pre&gt;&lt;span id=&quot;codeline-4040&quot;&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_printerr&quot;&gt;malloc_printerr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;malloc(): unaligned fastbin chunk detected 2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4041&quot;&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="80" width="500" x="-880" y="3330" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-57" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="reveal the &lt;b&gt;fd&lt;/b&gt; field of the chunk (safe linking)" vertex="1">
+          <mxGeometry height="70" width="140" x="-700" y="3437" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-58" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;fillColor=#1ba1e2;fontColor=light-dark(#FFFFFF, #fcffff);strokeColor=#006EAF;" value="&lt;div&gt;malloc align check the fd&lt;/div&gt;&lt;br&gt;&lt;pre&gt;&lt;span id=&quot;codeline-4025&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_printerr&quot;&gt;malloc_printerr&lt;/a&gt; (&quot;malloc(): unaligned fastbin chunk detected&quot;);&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="80" width="510" x="-885" y="3530" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-59" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="set fd to be this pointer" vertex="1">
+          <mxGeometry height="70" width="140" x="-700" y="3650" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-63" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="FIdvG4DXuz2LYwi1fpN5-62">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-945" y="4075" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-66" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#00FF00);" target="FIdvG4DXuz2LYwi1fpN5-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-50" parent="1" style="rhombus;whiteSpace=wrap;html=1;spacingLeft=50;spacingRight=50;" value="is victim_idx equal to the idx passed in an an arg? i.e. does this chunk belong to this bin. if not, there has to be a memory corruption" vertex="1">
+          <mxGeometry height="210" width="240" x="-750" y="3970" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-60" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="FIdvG4DXuz2LYwi1fpN5-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="get the &lt;b&gt;mchunk_size&lt;/b&gt; field of victim" vertex="1">
+          <mxGeometry height="70" width="140" x="-700" y="3760" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="get the index (victim_idx) from this size field from fastbin_index" vertex="1">
+          <mxGeometry height="70" width="140" x="-700" y="3880" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-61" edge="1" parent="1" source="FIdvG4DXuz2LYwi1fpN5-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.498;entryY=0.029;entryDx=0;entryDy=0;entryPerimeter=0;" target="FIdvG4DXuz2LYwi1fpN5-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-62" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;pre&gt;&lt;span id=&quot;codeline-4050&quot;&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_printerr&quot;&gt;malloc_printerr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;malloc(): memory corruption (fast)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="70" width="510" x="-1200" y="4230" as="geometry" />
+        </mxCell>
+        <mxCell id="FIdvG4DXuz2LYwi1fpN5-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;as long as the corresponding tchache bin (if exists) is not empty, populate it with fastbin chunks.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;there are two checks being done here:&lt;/div&gt;&lt;div&gt;1. the fastbin chunk size is not 16 bytes aligned&lt;/div&gt;&lt;div&gt;&lt;pre&gt;&lt;span id=&quot;codeline-4064&quot;&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_printerr&quot;&gt;malloc_printerr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;malloc(): unaligned fastbin chunk detected 3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div&gt;2. the chunksize field doesn&#39;t correspond with fastbin&#39;s size&lt;/div&gt;&lt;div&gt;&lt;pre&gt;&lt;span id=&quot;codeline-4067&quot;&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/malloc_printerr&quot;&gt;malloc_printerr&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;malloc(): chunk size mismatch in fastbin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="590" x="-925" y="4360" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
