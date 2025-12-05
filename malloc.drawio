@@ -46,7 +46,7 @@
           <mxGeometry height="1220" width="2650" x="-60" y="3330" as="geometry" />
         </mxCell>
         <mxCell id="-WvkMkaJOf7xV02tOFcN-39" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;fontSize=200;fontColor=light-dark(#000000,#858585);align=right;spacingRight=50;" value="&lt;div&gt;Malloc&lt;/div&gt;&lt;div&gt;&amp;nbsp;consolidate&lt;/div&gt;" vertex="1">
-          <mxGeometry height="1830" width="3120" x="3740" y="-1280" as="geometry" />
+          <mxGeometry height="2210" width="3120" x="3320" y="-1300" as="geometry" />
         </mxCell>
         <mxCell id="1" parent="0" />
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-3" edge="1" parent="1" source="9NN8qjYtB0Dsv46AUDU1-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="9NN8qjYtB0Dsv46AUDU1-2">
@@ -519,10 +519,135 @@
           <mxGeometry height="70" width="140" x="-250" y="6040" as="geometry" />
         </mxCell>
         <mxCell id="-WvkMkaJOf7xV02tOFcN-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="&lt;div&gt;malloc_consolidate() does some checks with do_check_inuse_chunk() and do_check_chunk():&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;# Complete List of Checks in do_check_inuse_chunk() and do_check_chunk()&lt;/div&gt;&lt;br&gt;## do_check_inuse_chunk() Checks&lt;br&gt;&lt;br&gt;1. Basic Chunk Validation&lt;br&gt;&amp;nbsp; &amp;nbsp;- Calls do_check_chunk(av, p) - performs all checks below&lt;br&gt;&lt;br&gt;2. Inuse Status Check&lt;br&gt;&amp;nbsp; &amp;nbsp;assert(inuse(p));&lt;br&gt;&amp;nbsp; &amp;nbsp;- Verifies the chunk claims to be in use (PREV_INUSE bit of next chunk is set)&lt;br&gt;&lt;br&gt;3. Previous Chunk Validation (if previous is free)&lt;br&gt;&amp;nbsp; &amp;nbsp;if (!prev_inuse(p))&lt;br&gt;&amp;nbsp; &amp;nbsp;- assert(next_chunk(prv) == p)&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Previous chunk&#39;s size must point back to this chunk&lt;br&gt;&amp;nbsp; &amp;nbsp;- Calls do_check_free_chunk(av, prv)&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Validates the previous free chunk&lt;br&gt;&lt;br&gt;4. Next Chunk Validation&lt;br&gt;&amp;nbsp; &amp;nbsp;If next chunk is top chunk:&lt;br&gt;&amp;nbsp; &amp;nbsp;- assert(prev_inuse(next));&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Top chunk must have PREV_INUSE bit set&lt;br&gt;&amp;nbsp; &amp;nbsp;- assert(chunksize(next) &amp;gt;= MINSIZE);&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Top chunk must be at least minimum size&lt;br&gt;&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp;If next chunk is free:&lt;br&gt;&amp;nbsp; &amp;nbsp;- Calls do_check_free_chunk(av, next)&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Validates the next free chunk&lt;br&gt;&lt;br&gt;---&lt;br&gt;&lt;br&gt;## do_check_chunk() Checks&lt;br&gt;&lt;br&gt;### For Non-mmapped Chunks&lt;br&gt;&lt;br&gt;If chunk is NOT top (and heap is contiguous):&lt;br&gt;- assert(((char *)p) &amp;gt;= min_address);&lt;br&gt;&amp;nbsp; Chunk address must be &amp;gt;= minimum heap address&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;br&gt;- assert(((char *)p + sz) &amp;lt;= ((char *)(av-&amp;gt;top)));&lt;br&gt;&amp;nbsp; Chunk end must be &amp;lt;= top chunk address&lt;br&gt;&lt;br&gt;If chunk IS top:&lt;br&gt;- assert((unsigned long)(sz) &amp;gt;= MINSIZE);&lt;br&gt;&amp;nbsp; Top size must be at least MINSIZE&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;br&gt;- assert(prev_inuse(p));&lt;br&gt;&amp;nbsp; Top chunk&#39;s PREV_INUSE bit must be set&lt;br&gt;&lt;br&gt;### For mmapped Chunks&lt;br&gt;&lt;br&gt;When heap is contiguous AND not using initial top:&lt;br&gt;- assert(((char *)p) &amp;lt; min_address || ((char *)p) &amp;gt;= max_address);&lt;br&gt;&amp;nbsp; mmapped chunk must be outside the main heap range&lt;br&gt;&lt;br&gt;Page Alignment:&lt;br&gt;- assert(((prev_size(p) + sz) &amp;amp; (GLRO(dl_pagesize) - 1)) == 0);&lt;br&gt;&amp;nbsp; Total size (prev_size + chunk size) must be page-aligned&lt;br&gt;&lt;br&gt;Memory Alignment:&lt;br&gt;- assert(!misaligned_chunk(p));&lt;br&gt;&amp;nbsp; Chunk must be properly aligned (typically 8 or 16 byte alignment)&lt;br&gt;&lt;br&gt;---&lt;br&gt;&lt;br&gt;## Summary by Category&lt;br&gt;&lt;br&gt;Memory Bounds (5 checks):&lt;br&gt;- Non-mmapped: address &amp;gt;= min_address&lt;br&gt;- Non-mmapped: end &amp;lt;= top chunk&lt;br&gt;- mmapped: outside main heap range&lt;br&gt;- Top chunk: size &amp;gt;= MINSIZE&lt;br&gt;- Page alignment for mmapped&lt;br&gt;&lt;br&gt;Alignment (1 check):&lt;br&gt;- Chunk memory alignment&lt;br&gt;&lt;br&gt;Status Bits (2 checks):&lt;br&gt;- Chunk claims to be inuse&lt;br&gt;- Top/previous inuse bits correct&lt;br&gt;&lt;br&gt;Linkage (1 check):&lt;br&gt;- Previous chunk&#39;s size points correctly back&lt;br&gt;&lt;br&gt;Recursive Validations (2 checks):&lt;br&gt;- Validates previous free chunk if present&lt;br&gt;- Validates next free chunk if present&lt;br&gt;&lt;br&gt;Total: 11 direct assertions + recursive free chunk validations" vertex="1">
-          <mxGeometry height="1400" width="460" x="3850" y="-1140" as="geometry" />
+          <mxGeometry height="1400" width="460" x="3430" y="-1160" as="geometry" />
         </mxCell>
-        <mxCell id="-WvkMkaJOf7xV02tOFcN-41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="" vertex="1">
-          <mxGeometry height="400" width="590" x="4380" y="-1130" as="geometry" />
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-94" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="-WvkMkaJOf7xV02tOFcN-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;spacingRight=10;" value="set the currently processing fastbin to the first chunkptr in this fastbin" vertex="1">
+          <mxGeometry height="50" width="220" x="4475" y="-1170" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-74" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-47" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="is it not NULL?" vertex="1">
+          <mxGeometry height="60" width="201" x="4484.5" y="-1040" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-83" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="-WvkMkaJOf7xV02tOFcN-50">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4190" y="490" />
+              <mxPoint x="4190" y="-875" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-89" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-87">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-48" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="is the next chunk NULL?" vertex="1">
+          <mxGeometry height="60" width="201" x="4484.5" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-54" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-WvkMkaJOf7xV02tOFcN-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-50" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="use check_inuse_chunk(), a macro that is essentially just a wrapper for the do_check_inuse_chunk()" vertex="1">
+          <mxGeometry height="70" width="250" x="4460" y="-910" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-55" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#FF0000);" target="-WvkMkaJOf7xV02tOFcN-53">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4775" y="-760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-63" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-52" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="prev_inuse bit set in size field?" vertex="1">
+          <mxGeometry height="80" width="240" x="4465" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-62" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="-WvkMkaJOf7xV02tOFcN-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Add prev_size to size and consolidate &lt;b&gt;the one&lt;/b&gt;&amp;nbsp;free chunks before&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="190" x="4680" y="-680" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-64" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="-WvkMkaJOf7xV02tOFcN-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-70" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-58" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="&lt;div&gt;is the next chunk the top chunk?&lt;/div&gt;&lt;div&gt;`nextchunk == av-&amp;gt;top` ?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="280" x="4445" y="-500" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-65" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#FF0000);entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-WvkMkaJOf7xV02tOFcN-61">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4745" y="-270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-66" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-60" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="inuse bit set for the next chunk?" vertex="1">
+          <mxGeometry height="70" width="250" x="4460" y="-305" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-79" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="-WvkMkaJOf7xV02tOFcN-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Consolidate &lt;b&gt;the one&lt;/b&gt;&amp;nbsp;free chunk after&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="190" x="4650" y="-200" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-78" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="-WvkMkaJOf7xV02tOFcN-77">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5160" y="-448" />
+              <mxPoint x="5160" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="consolidate this chunk with the top chunk and set ac-&amp;gt; top to this chunk" vertex="1">
+          <mxGeometry height="70" width="190" x="4920" y="-483" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-75" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="-WvkMkaJOf7xV02tOFcN-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-82" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="-WvkMkaJOf7xV02tOFcN-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-76" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&lt;pre&gt;&lt;span id=&quot;codeline-4983&quot;&gt;&lt;span class=&quot;w&quot;&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;  // p is the consolidated chunk&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;  // unsorted_bin is &amp;amp;bins[0-1], which is a libc pointer &lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;  first_unsorted&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsorted_bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/fd&quot;&gt;fd&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4984&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsorted_bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/fd&quot;&gt;fd&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4985&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_unsorted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/bk&quot;&gt;bk&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4986&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4987&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/in_smallbin_range&quot;&gt;in_smallbin_range&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4988&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/fd_nextsize&quot;&gt;fd_nextsize&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4989&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/bk_nextsize&quot;&gt;bk_nextsize&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4990&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4991&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4992&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/set_head&quot;&gt;set_head&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/PREV_INUSE&quot;&gt;PREV_INUSE&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4993&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/bk&quot;&gt;bk&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unsorted_bin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span id=&quot;codeline-4994&quot;&gt;&lt;span class=&quot;w&quot;&gt;&#x9;  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&lt;a class=&quot;ident&quot; href=&quot;https://elixir.bootlin.com/glibc/glibc-2.42.9000/C/ident/fd&quot;&gt;fd&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_unsorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt; &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;  // it inserts this chunk into unsorted_bin&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="260" width="535" x="4317.5" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-80" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-WvkMkaJOf7xV02tOFcN-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-77" parent="1" style="rounded=1;whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" value="remove this chunk from this fastbin" vertex="1">
+          <mxGeometry height="40" width="210" x="4680" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-91" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="-WvkMkaJOf7xV02tOFcN-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4070" y="755" />
+              <mxPoint x="4070" y="-1010" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-93" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="-WvkMkaJOf7xV02tOFcN-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-85" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="have we reached the end o allf fastbins?" vertex="1">
+          <mxGeometry height="90" width="330" x="4420" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-88" edge="1" parent="1" source="-WvkMkaJOf7xV02tOFcN-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="-WvkMkaJOf7xV02tOFcN-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-87" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="set the current processing fastbin to the next one" vertex="1">
+          <mxGeometry height="60" width="120" x="4525" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="-WvkMkaJOf7xV02tOFcN-92" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="finish" vertex="1">
+          <mxGeometry height="40" width="108" x="4531" y="840" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
