@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.7">
   <diagram name="Page-1" id="oYlMDyV3FdvknKEnqVfY">
-    <mxGraphModel dx="7553" dy="4101" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6776" dy="3572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="9NN8qjYtB0Dsv46AUDU1-39" parent="0" value="bg" />
@@ -40,7 +40,7 @@
           <mxGeometry height="2250" width="1460" x="-1740" y="2560" as="geometry" />
         </mxCell>
         <mxCell id="-WvkMkaJOf7xV02tOFcN-2" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;fontSize=200;fontColor=light-dark(#000000,#858585);align=right;spacingRight=50;spacingLeft=50;" value="Bins" vertex="1">
-          <mxGeometry height="3140" width="4320" x="-100" y="3080" as="geometry" />
+          <mxGeometry height="4170" width="4320" x="-100" y="3080" as="geometry" />
         </mxCell>
         <mxCell id="-WvkMkaJOf7xV02tOFcN-15" parent="9NN8qjYtB0Dsv46AUDU1-39" style="rounded=1;whiteSpace=wrap;html=1;fontSize=200;fontColor=light-dark(#000000,#858585);align=right;spacingRight=50;spacingLeft=50;" value="Small Bins" vertex="1">
           <mxGeometry height="1220" width="2650" x="-60" y="3330" as="geometry" />
